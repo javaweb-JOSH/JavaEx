@@ -8,14 +8,16 @@ public class OperEx {
 //		bitOperEx();
 //		bitShiftEx();
 		conditionalOperEx();
+	
 	}
+	
 	// 3항 연산자
 	private static void conditionalOperEx() {
 		int a = 10;
 		
-		//	만약, a가 짝수면 "짝수", 홀수면 "홀수"
-		String reult = a % 2 == 0 ? "짝수": "홀수";
-		System.out.println(a + "는 짝수? " + result);
+		//		만약, a가 짝수면 "짝수", 홀수면 "홀수"
+			String result = a % 2 == 0 ? "짝수": "홀수";
+			System.out.println(a + "는 짝수? " + result);
 		
 		int score = 40;
 		
@@ -46,6 +48,7 @@ public class OperEx {
 		System.out.println(Integer.toBinaryString(val >> 1)); // 우측으로 1비트 이동
 		System.out.println(Integer.toBinaryString(val >> 2)); // 우측으로 2비트 이동
 	}
+	
 	// 비트 연산자 (&, |, ~)
 	// int 에만 적용, 비트 단위의 미세한 조정에 사용
 	private static void bitOperEx() {
@@ -62,6 +65,7 @@ public class OperEx {
 		result = ~b1;	//	비트 논리부정
 		System.out.println(Integer.toBinaryString(result));
 	}
+	
 	//	비교, 논리연산자
 	private static void logialOperEx() {
 		//	비교연산자 ==, !=, >, >=, <, <=
@@ -82,7 +86,7 @@ public class OperEx {
 		//조건 1 and 조건 2
 		boolean r1 = val > 0;
 		boolean r2 = val < 10;
-		String r1andr2 = ("r1 && r2 = " + r1andr2);
+		boolean r1andr2 = r1 && r2; // = val > 0 && val < 10
 		System.out.println("r1 && r2 =" + r1andr2);
 		
 		//val 이 0이하, 10이상의 영역에 있는가?
