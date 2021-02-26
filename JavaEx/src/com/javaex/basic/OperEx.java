@@ -27,7 +27,6 @@ public class OperEx {
 		
 		String message = score >= 80 ? "Good": score >50 ? "Pass": "Fail";
 		System.out.println("Score:" + score + "Result:" + message);
-		
 	}
 	
 	
