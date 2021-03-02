@@ -12,8 +12,22 @@ public class ConditionalEx {
 //		switchEx2();
 //		switchEx3();
 //		ifPractice02();
+		ifPractice03();
 	}
+	private static void ifPractice03() {
+//	점수를 입력받아 등급을 표시하는
+//	프로그램을 작성하세요
+//	90점 이상      이면"A 등급"
+//	80점 이상 ~89점이면"B 등급"
+//	70점 이상 ~79점이면"C 등급"
+//  60점 이상 ~69점이면"D 등급"
+//	60점 미만이면 "F 등급"
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("점수를 입력하세요:");
+	int score = scanner.nextInt();
 	
+	
+	}
 	private static void ifPractice02() {
 //	점수를 입력받아
 //	입력된 수가 3의
