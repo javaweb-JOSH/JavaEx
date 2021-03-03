@@ -78,7 +78,7 @@ public class ConditionalEx {
 			message = "열공";
 			break;
 		case "FRI":
-			message ="불금";
+			message = "불금";
 			break;
 		case "SAT":
 			message = "주말";

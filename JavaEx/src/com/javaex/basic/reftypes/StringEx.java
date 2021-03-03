@@ -24,7 +24,7 @@ public class StringEx {
 		//	%f(실수), %%(%)
 		//	현재 이자율은 1.25%입니다.
 		System.out.printf("현재 이자율은 %f입니다.%n", 1.25f);
-		fmt = "현재 이자율은 %.2f%%입니다.%n";
+		fmt = "현재 이자율은 %.2f%%입니다.%n";	//	%.2f -> 소수점 2째 자리까지 표기(부가정보)
 		System.out.printf(fmt, 1.25f);
 	}
 	private static void stringTest() {
