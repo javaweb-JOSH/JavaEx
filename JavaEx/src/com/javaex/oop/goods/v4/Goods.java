@@ -1,7 +1,7 @@
-package com.javaex.oop.goods.v3;
+package com.javaex.oop.goods.v4;
 
-//	v3. 생성자
-//	new 키워드와 함꼐 사용되고 객체의 초기화를 담당한다
+//	v4. this : 객체 자신을 의미
+//		this() : 내부에 있는 다른 생성자를 호출
 public class Goods {
 	//	필드
 	private String name;	//	객체내부 name
@@ -9,9 +9,17 @@ public class Goods {
 	
 	//	코드 내에 생성자가 하나도 없으면 컴파일러가 기본 생성자를 추가한다.
 	//		but 사용자 정의 생성자가 있으면 기본 생성자를 추가하지 않는다
-	//	모든 필드를 초기화하는 생성자
-	public Goods(String name, int price) {
+	//	생성자 1
+	public Goods(String name) {
 		this.name = name;
+	}
+	
+	//	모든 필드를 초기화하는 생서자: 생성자 2
+	public Goods(String name, int price) {
+//		this.name = name;
+		//	내부에 있는 다른 생성자
+	
+		this(name);
 		this.price = price;
 	}
 	
@@ -35,7 +43,7 @@ public class Goods {
 	
 	//	출력용 메서드
 	public void showInfo() {
-		System.out.printf("상품 이름:%s%n가격: %원%n", name, price);
+		System.out.printf("상품 이름:%s%n가격: %d원%n", name, price);
 	}
 
 }

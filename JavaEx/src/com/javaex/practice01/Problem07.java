@@ -14,6 +14,7 @@ public class Problem07 {
 		// (y 인경우 다시 게임이 시작됩니다.
 		Scanner scanner = new Scanner(System.in);
 		
+		//	바깥쪽 루프
 		while (true) {
 			//	게임 로직
 			int num = (int)(Math.random() * 100) + 1;	// 1~100 사이의 정수난수			
@@ -22,12 +23,13 @@ public class Problem07 {
 			System.out.println("================");
 			
 			while (true) {				
-				System.out.print(">>");
+				System.out.print(num + ">>");
+				int inputNum = scanner.nextInt();
 				//	num와 inputNum을 비교 -> 정답체크
-				if (num == num) {
+				if (inputNum == num) {
 					System.out.println("정답입니다!");
 					break;
-				} else if (num < num) {
+				} else if (inputNum < num) {
 					System.out.println("더 높게");
 				} else {
 					System.out.println("더 낮게");
@@ -40,7 +42,7 @@ public class Problem07 {
 
 			if (retry.equals("y")) {
 				break;
-				//	"y"일떄 종료시키기
+			
 			}
 		}
 		
