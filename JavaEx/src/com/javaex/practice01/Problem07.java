@@ -12,35 +12,39 @@ public class Problem07 {
 		// 정답을 맞춘경우 "맞았습니다."출력됩니다.
 		// 게임을 반복하기 위해 y/n이라고 묻고 n인 경우 종료됩니다.
 		// (y 인경우 다시 게임이 시작됩니다.
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		while (true) {
-			String retry;
-			int num = (int) (Math.random() * 100) + 1;
-			int inputNum;
+			//	게임 로직
+			int num = (int)(Math.random() * 100) + 1;	// 1~100 사이의 정수난수			
+			System.out.println("================");
+			System.out.println("게임을 시작합니다");
+			System.out.println("================");
 			
-			System.out.println("====================");
-			System.out.println("[숫자맞추기게임 시작");
-			System.out.println("====================");
-			while (true) {
-				
+			while (true) {				
 				System.out.print(">>");
-				//	사용자 입력값 받기
-				//	입력한 값 높은지 낮은지 맞추었는지 판단
-				
+				//	num와 inputNum을 비교 -> 정답체크
+				if (num == num) {
+					System.out.println("정답입니다!");
+					break;
+				} else if (num < num) {
+					System.out.println("더 높게");
+				} else {
+					System.out.println("더 낮게");
+				}
+								
 			}
-			sc.nextLine();
 			
 			System.out.print("게임을 종료하시겠습니다? (y/n) >>");
-			retry = sc.next();
-			if ("y".equals(retry)) {
+			String retry = scanner.next();	//	더 진행할 것인지를 물어봄
+
+			if (retry.equals("y")) {
+				break;
 				//	"y"일떄 종료시키기
 			}
 		}
 		
-		sc.close();
-		
-
+		scanner.close();
 	}
 
 }
