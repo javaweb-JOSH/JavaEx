@@ -1,5 +1,6 @@
 package com.javaex.exceptions;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -19,12 +20,12 @@ public class ExceptionEx {
 		ThrowsExcept except = new ThrowsExcept();
 		//	checked 예외 처리 예제
 //		try {
-	
+//	
 //			except.executeChecked();	//	 checked Exception
 //		} catch (IOException e) {
 //			System.err.println("호출된 메서드에서 checked 예외 발생!");
 //			System.err.println("메세지:" + e.getMessage());
-//		}+
+//		}
 		
 		//	unchecked 예외 처리 예제
 		try {
@@ -43,7 +44,6 @@ public class ExceptionEx {
 			e.printStackTrace();
 		} finally {
 			System.out.println("예외 처리 완료!");
-			
 		}
 	}
 	

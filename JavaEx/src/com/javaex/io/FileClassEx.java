@@ -7,7 +7,6 @@ import java.io.IOException;
 //		파일의 정보를 확인
 //		파일, 디렉터리를 생성, 삭제할 수는 있지만
 //		파일 내욜을 기록하는 것은 Stream 에서 담당 
-
 public class FileClassEx {
 	//	현재 프로젝트 내의 루트 디렉터리 위치
 	private static String rootPath = System.getProperty("user.dir") + "\\files\\";
@@ -29,34 +28,33 @@ public class FileClassEx {
 		System.out.println("=> myFile.txt 생성");
 		if (!file.exists()) {	//	파일이 없으면
 			try {
-			file.createNewFile();	//	실제 파일 생성
-		} catch (IOException e) {
-			System.out.println("파일을 만들지 못했습니다!");
+				file.createNewFile();	//	실제 파일 생성
+			} catch (IOException e) {
+				System.out.println("파일을 만들지 못했습니다!");
+			}
 		}
+		printInfo(root);
+	
+		//	파일 삭제
+		System.out.println("=> myFile.txt 삭제");
+		file.delete();
+	
+		printInfo(root);
 	}
-	printInfo(root);
-	
-	//	파일 삭제
-	System.out.println("=> myfile.txt 삭제");
-	file.delete();
-	
-	printInfo(root);
-}
 	
 	private static void printInfo(File file) {
 		System.out.println("----------");
 		
 		//	file -> directory -> 파일 목록 출력
-		//		 -> file	 -> 파일 정보 출력
+		//		 -> file -> 파일 정보 출력
 		if (file.isDirectory()) {
 			System.out.println("Directory:" + file.getName());
 			//	파일 목록
 			File[] files = file.listFiles();
 			//	파일 목록 출력
 			for (File f:files) {
-				System.out.print(f.isDirectory()? "d": "f ");
+				System.out.print(f.isDirectory() ? "d ": "f ");
 				System.out.println(f.getName() + ":" + f.length());	//	file size
-				
 			}
 		} else {
 			System.out.println("File:" + file.getName() + ":" + file.length());
