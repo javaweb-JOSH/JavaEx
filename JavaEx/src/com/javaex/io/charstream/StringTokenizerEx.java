@@ -26,10 +26,10 @@ public class StringTokenizerEx {
 			while((line = br.readLine()) != null) {
 				//	line을 분절
 				StringTokenizer st = new StringTokenizer(line,	//	분절시킬 문자열
-									" " );	// 	분절시킬 구분자 - 기본값: 공백, \t, \r, \n
-				while(st.hasMoreTokens()) {//	뒤에 토큰이 더 있는가?
+									" ");	// 	분절시킬 구분자 - 기본값: 공백, \t, \r, \n
+				while(st.hasMoreTokens()) {	//	뒤에 토큰이 더 있는가?
 					String token = st.nextToken();	//	토큰을 받아오고 다음으로 이동
-					System.out.println(token + " ");
+					System.out.print(token + " ");
 				}
 				System.out.println();
 			}
@@ -45,5 +45,4 @@ public class StringTokenizerEx {
 			}
 		}
 	}
-
 }
