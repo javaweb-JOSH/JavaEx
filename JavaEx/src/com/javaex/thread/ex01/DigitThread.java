@@ -1,4 +1,4 @@
-package com.javaex.thread;
+package com.javaex.thread.ex01;
 
 //	방법 1. Thread 상속
 //		-> 스레드 내부 로직을 정밀하게 제어 가능

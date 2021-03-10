@@ -1,4 +1,4 @@
-package com.javaex.thread;
+package com.javaex.thread.ex01;
 
 public class MainThread {
 
