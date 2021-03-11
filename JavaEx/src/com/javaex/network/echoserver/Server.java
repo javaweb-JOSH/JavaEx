@@ -30,7 +30,14 @@ public class Server {
 			System.out.println("SERVER: [연결을 기다립니다.]");
 			
 			//	연결 대기
-			Socket socket = serverSocket.accept();
+			while(true) {
+				Socket socket = serverSocket.accept();
+				Thread thread = new ServerThread(socket);
+				thread.start();			
+			}
+				
+			//------------------Working Tread Logic 여기까지가 메인쓰레드
+			/*
 			//	클라이언트 정보 확인
 			InetSocketAddress socketAddress =
 					(InetSocketAddress)socket.getRemoteSocketAddress();	//	원격지 소켓의 주소확인
@@ -72,10 +79,12 @@ public class Server {
 			}
 			
 			bw.close();
-			br.close();			
+			br.close();		
+			//-----------------Working Thread Logic End
+			 */	
 			
 			//	접속허용 후처리
-			System.out.println("SERVER: [서버를 종료합니다]");
+//			System.out.println("SERVER: [서버를 종료합니다]");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
